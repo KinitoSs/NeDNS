@@ -153,10 +153,6 @@ def get_list_of_all_computers() -> list[Computer]:
             ssd_size=250,
             hdd_size=2000,
         ),
-
-
-
-
         Computer(
             firm="DEXP Laptop",
             model="Office",
@@ -202,7 +198,7 @@ def get_list_of_all_computers() -> list[Computer]:
             ssd_size=128,
             hdd_size=1000,
         ),
-        Computer(   
+        Computer(
             firm="DEXP Laptop",
             model="Montage",
             computer_type=ComputerType.LAPTOP,
@@ -216,6 +212,6 @@ def get_list_of_all_computers() -> list[Computer]:
             gpu_vram=8,
             ssd_size=250,
             hdd_size=2000,
-        )
+        ),
     ]
     return result
