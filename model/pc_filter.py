@@ -2,6 +2,8 @@ from model.computer import Computer, ComputerType, CpuOrGpuFirm
 
 
 class PcFilter:
+    """Класс, фильтрующий компьютеры."""
+
     __list_of_computers: list[Computer]
 
     def __init__(self, list_of_computers: list[Computer]) -> None:

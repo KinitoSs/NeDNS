@@ -2,30 +2,38 @@ from enum import Enum
 
 
 class CpuOrGpuFirm(Enum):
+    """Фирма процессора/видеокарты."""
+
     INTEL = 1
     AMD = 2
     NVIDIA = 3
 
 
 class ComputerType(Enum):
+    """Тип компьютера."""
+
     PC = 1
     LAPTOP = 2
 
 
 class Computer:
-    # firm: str = None
-    # model: str = None
-    # computer_type: ComputerType = None
-    # price: float = None
-    # cpu_firm: CpuOrGpuFirm = None
-    # cpu_series: int = None
-    # ram_size: int = None
-    # ram_hrz: int = None
-    # gpu: CpuOrGpuFirm = None
-    # gpu_series: int = None
-    # gpu_vram: int = None
-    # ssd_size: int = None
-    # hdd_size: int = None
+    """Класс "Компьютер".
+
+    Поля:
+        firm (str): фирма
+        model (str): модель
+        computer_type (ComputerType): тип
+        price (float): цена
+        cpu_firm (CpuOrGpuFirm): фирма ЦП
+        cpu_series (int): серия ЦП
+        ram_size (int): количество оперативной памяти (гб)
+        ram_hrz (int): частота оперативной памяти
+        gpu (CpuOrGpuFirm): фирма видеокарты
+        gpu_series (int): серия видеокарты
+        gpu_vram (int): количество видеопамяти (гб)
+        ssd_size (int): размер SSD (гб)
+        hdd_size (int): размер HDD (гб)
+    """
 
     def __init__(
         self,
@@ -92,6 +100,11 @@ class Computer:
 
 
 def get_list_of_all_computers() -> list[Computer]:
+    """Получение списка всех компьютеров.
+
+    Возвращает:
+        list[Computer]: список всех компьютеров
+    """
     result = [
         Computer(
             firm="DEXP PC",

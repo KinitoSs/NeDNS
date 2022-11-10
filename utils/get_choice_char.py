@@ -1,4 +1,12 @@
 def get_choice_char(choice_range: int) -> int:
+    """Получение ввода пользователя из нескольких вариантов ответа.
+
+    Аргументы:
+        choice_range (int): количество вариантов ответа
+
+    Возвращает:
+        int: выбор пользователя
+    """
     input_char: str = input("Введите цифру: ")
     allowed_chars: str = ""
 
