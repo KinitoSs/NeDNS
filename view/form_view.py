@@ -41,19 +41,28 @@ class FormView(ITerminal):
         self.__fill_form_result()
 
     def __fill_form_result(self) -> None:
-        self.__pc_or_laptop = ViewAskFor("Какой тип вы предпочитаете?\n1. Персональный компьютер\n2. Ноутбук",
-                                         2).return_choice()
-        self.__is_for_gaming = ViewAskFor("Играете в игры?\n1. Да\n2. Нет", 2).return_choice()
-        self.__is_for_montage = ViewAskFor("Работаете ли с видео/графикой?\n1. Да\n2. Нет", 2).return_choice()
-        self.__is_for_programming = ViewAskFor("Будете ли вы программировать?\n1. Да\n2. Нет", 2).return_choice()
-        self.__is_for_office = ViewAskFor("Учитесь ли вы / работаете в оффисе?\n1. Да\n2. Нет", 2).return_choice()
+        self.__pc_or_laptop = ViewAskFor(
+            "Какой тип вы предпочитаете?\n1. Персональный компьютер\n2. Ноутбук", 2
+        ).return_choice()
+        self.__is_for_gaming = ViewAskFor(
+            "Играете в игры?\n1. Да\n2. Нет", 2
+        ).return_choice()
+        self.__is_for_montage = ViewAskFor(
+            "Работаете ли с видео/графикой?\n1. Да\n2. Нет", 2
+        ).return_choice()
+        self.__is_for_programming = ViewAskFor(
+            "Будете ли вы программировать?\n1. Да\n2. Нет", 2
+        ).return_choice()
+        self.__is_for_office = ViewAskFor(
+            "Учитесь ли вы / работаете в оффисе?\n1. Да\n2. Нет", 2
+        ).return_choice()
 
     def __form_reslut_handle(self) -> None:
         __form_result_dict = {
-            'pc_or_laptop': self.__pc_or_laptop,
-            'is_for_gaming': self.__is_for_gaming,
-            'is_for_montage': self.__is_for_montage,
-            'is_for_programming': self.__is_for_programming,
-            'is_for_office': self.__is_for_office
+            "pc_or_laptop": self.__pc_or_laptop,
+            "is_for_gaming": self.__is_for_gaming,
+            "is_for_montage": self.__is_for_montage,
+            "is_for_programming": self.__is_for_programming,
+            "is_for_office": self.__is_for_office,
         }
         RecommendationsViewModel(__form_result_dict)
