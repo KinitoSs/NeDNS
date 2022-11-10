@@ -15,7 +15,7 @@ class RecommendationsViewModel:
         self.__render_recommendations_view()
 
     def __filter(self) -> None:
-        # self.__form_result['pc_or_laptop']: int           1: PC, 2: LAPTOP
+        # self.__form_result['pc_or_laptop']: int           1: PC,  2: LAPTOP
         # self.__form_result['is_for_gaming']: int          1: Yes, 2: No
         # self.__form_result['is_for_montage']: int         1: Yes, 2: No
         # self.__form_result['is_for_programming']: int     1: Yes, 2: No
