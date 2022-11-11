@@ -20,7 +20,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def return_list_of_filtered_computers(self) -> list[Computer]:
-        """должен возвращать список всех отфильтрованных компьютеров
+        """Должен возвращать список всех отфильтрованных компьютеров.
 
         Возвращает:
             list[Computer]: список всех отфильтрованных компьютеров
@@ -29,7 +29,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def get_pcs(self) -> list[Computer]:
-        """должен возвращать список всех ПК
+        """Должен возвращать список всех ПК.
 
         Возвращает:
             list[Computer]: список всех ПК
@@ -38,7 +38,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def get_laptops(self) -> list[Computer]:
-        """должен возвращать список всех ноутбуков
+        """Должен возвращать список всех ноутбуков.
 
         Возвращает:
             list[Computer]: список всех ноутбуков
@@ -47,7 +47,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def get_gaming_pcs(self) -> list[Computer]:
-        """должен возвращать список всех игровых компьютеров
+        """Должен возвращать список всех игровых компьютеров.
 
         Возвращает:
             list[Computer]: список всех игровых компьютеров
@@ -56,7 +56,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def get_montage_pcs(self) -> list[Computer]:
-        """должен возвращать список всех компьютеров для монтажа/графики
+        """Должен возвращать список всех компьютеров для монтажа/графики.
 
         Возвращает:
             list[Computer]: список всех компьютеров для монтажа/графики
@@ -65,7 +65,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def get_programming_pcs(self) -> list[Computer]:
-        """должен возвращать список всех компьютеров для программирования
+        """Должен возвращать список всех компьютеров для программирования.
 
         Возвращает:
             list[Computer]: список всех компьютеров для программирования
@@ -74,7 +74,7 @@ class IPcFilter(metaclass=abc.ABCMeta):
 
     @abc.abstractmethod 
     def get_office_pcs(self) -> list[Computer]:
-        """должен возвращать список всех оффисных компьютеров
+        """Должен возвращать список всех оффисных компьютеров.
 
         Возвращает:
             list[Computer]: список всех оффисных компьютеров
