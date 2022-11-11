@@ -1,3 +1,4 @@
+from base.IPcFilter import IPcFilter
 from model.computer import get_list_of_all_computers
 from model.pc_filter import PcFilter
 from view.recomendation_view import RecommendationView
@@ -7,7 +8,7 @@ class RecommendationsViewModel:
     """Класс, который на основании результатов выбора пользователя в форме генерирует рекомендуемые компьютеры."""
 
     __form_result: dict
-    __pc_filter: PcFilter
+    __pc_filter: IPcFilter
 
     def __init__(self, form_result: dict) -> None:
         """Конструктор всех нужных атрибутов.

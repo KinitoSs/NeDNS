@@ -1,9 +1,10 @@
+from base.IPcFilter import IPcFilter
 from model.computer import Computer, ComputerType, CpuOrGpuFirm
 
 
-class PcFilter:
+class PcFilter(IPcFilter):
     """Класс, фильтрующий компьютеры."""
-
+    
     __list_of_computers: list[Computer]
 
     def __init__(self, list_of_computers: list[Computer]) -> None:
