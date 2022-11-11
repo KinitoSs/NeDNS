@@ -147,3 +147,10 @@ class PcFilter(IPcFilter):
             ):
                 result.append(computer)
         return result
+
+    def get_computers_under_price(self, price) -> list[Computer]:
+        result: list[Computer] = []
+        for computer in self.__list_of_computers:
+            if computer.price <= price:
+                result.append(computer)
+        return result

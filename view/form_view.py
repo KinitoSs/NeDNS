@@ -48,6 +48,7 @@ class FormView(ITerminal):
     __is_for_montage: int  # 1: Yes, 2: No
     __is_for_programming: int  # 1: Yes, 2: No
     __is_for_office: int  # 1: Yes, 2: No
+    __price: int
 
     def __init__(self) -> None:
         """Инициализация формы."""
@@ -79,6 +80,7 @@ class FormView(ITerminal):
         self.__is_for_office = ViewAskFor(
             "Учитесь ли вы / работаете в оффисе?\n1. Да\n2. Нет", 2
         ).return_choice()
+        self.__price = int(input(("Сколько вы готовы отдать за компьютер: ")))
 
     def __form_reslut_handle(self) -> None:
         """Метод, обрабатывающий ввод пользователей."""
@@ -88,5 +90,6 @@ class FormView(ITerminal):
             "is_for_montage": self.__is_for_montage,
             "is_for_programming": self.__is_for_programming,
             "is_for_office": self.__is_for_office,
+            "price": self.__price
         }
         RecommendationsViewModel(__form_result_dict)

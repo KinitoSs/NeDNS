@@ -48,6 +48,8 @@ class RecommendationsViewModel:
         elif self.__form_result["is_for_office"] == 1:
             self.__pc_filter = PcFilter(self.__pc_filter.get_office_pcs())
 
+        self.__pc_filter = PcFilter(self.__pc_filter.get_computers_under_price(self.__form_result["price"]))
+
     def __render_recommendations_view(self) -> None:
         """Рендер экрана рекомендаций."""
         RecommendationView(self.__pc_filter.return_list_of_filtered_computers())
